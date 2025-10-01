@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="/eu.ico">
-    <title>Is Moldova a member of European Union?</title>
+    <title>Is Moldova in EU?</title>
     <style>
         body {
             display: flex;
@@ -22,17 +22,35 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: normal;
+            opacity: 40%;
+            visibility: hidden;
+        }
+        button {
+            background-color: transparent;
+            border: 0px;
+              cursor:pointer;
         }
     </style>
 </head>
 
 <body>
     <div style="text-align: center;">
-        <h1>Is Moldova a member of European Union?</h1>
-        <div class="content">No!</h1>
-        </div>
+        <h1 id="header">Is Moldova in EU?</h1>
+        <button id="no">
+            <div class="content">No!</div>
+        </button>
+    </div>
 </body>
-
+<script>
+    document.getElementById("no").addEventListener("click", function () {
+      const header = document.getElementById("header")
+      if (header.style.visibility === "visible") {
+        header.style.visibility = "hidden";
+      } else {
+        header.style.visibility = "visible";
+      }
+    });
+</script>
 </html>
