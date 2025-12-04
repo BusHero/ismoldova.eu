@@ -6,42 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="/eu.ico">
     <title>Is Moldova in EU?</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+  }
 
-        div.content {
-            font-size: 10rem;
-            font-weight: bold;
-            /* text-align: center; */
-        }
+  .center-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 
-        h1 {
-            font-size: 2.5rem;
-            font-weight: normal;
-            opacity: 40%;
-            visibility: hidden;
-        }
-        button {
-            background-color: transparent;
-            border: 0px;
-              cursor:pointer;
-        }
-    </style>
+  h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    opacity: 40%;
+    visibility: hidden;
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  div.content {
+    font-size: 10rem;
+    font-weight: bold;
+  }
+
+  button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+</style>
 </head>
 
 <body>
-    <div style="text-align: center;">
-        <h1 id="header">Is Moldova in EU?</h1>
-        <button id="no">
-            <div class="content">No!</div>
-        </button>
-    </div>
+  <div class="center-wrapper">
+    <h1 id="header">Is Moldova in EU?</h1>
+    <button id="no">
+      <div class="content">No!</div>
+    </button>
+  </div>
 </body>
 <script>
     document.getElementById("no").addEventListener("click", function () {
